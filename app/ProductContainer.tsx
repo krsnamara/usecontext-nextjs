@@ -11,7 +11,7 @@ function ProductContainer() {
     )
   }
 
-  return <div>ProductContainer</div>
+  return <div className="flex flex-wrap gap-3 p-5">ProductContainer</div>
 }
 
 export default ProductContainer
