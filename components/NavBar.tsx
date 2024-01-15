@@ -32,9 +32,6 @@ export function NavBar() {
             <Link href="/blog">
               <p>Blog</p>
             </Link>
-            <Link href="/about">
-              <p>About</p>
-            </Link>
           </ul>
         </div>
       </div>

@@ -1,35 +1,20 @@
 'use client'
-
-import { useEffect } from 'react'
 import { useGlobalContext } from '@/app/context/store'
+import { Child } from '@/components/Child'
+
 export default function Home() {
-  const { rock, setRock, data, setData } = useGlobalContext()
-
-  useEffect(() => {
-    setRock('123')
-    setData([
-      { firstName: 'Quartz' },
-      { firstName: 'Marble' },
-      { firstName: 'Granite' },
-    ])
-  }, [setData, setRock])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setData([...data, { firstName: e.target.value }])
-  }
+  const rocks = useGlobalContext()
 
   return (
-    <div>
-      <main className="">
-        <p>Type of rock: {rock}</p>
-        <ul>List of rocks</ul>
-        {data.map((e, i) => (
-          <li key={i}>{e.firstName}</li>
-        ))}
-        <input type="text" />
-        <button onSubmit={handleSubmit}></button>
-      </main>
+    <div className="flex flex-col items-center border border-solid border-slate-800 m-5 p-10 rounded-md bg-teal-200">
+      <div className="text-3xl font-bold mb-4 border-b-4 border-slate-600">
+        Home Tree
+      </div>
+      <div className="border-b-orange-600 border-b-4">Parent Component</div>
+      <div className="text-3xl font-bold mb-4"> Context Value:{rocks.rock}</div>
+      <div>
+        <Child />
+      </div>
     </div>
   )
 }

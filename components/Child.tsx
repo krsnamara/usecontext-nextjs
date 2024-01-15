@@ -1,0 +1,16 @@
+import { useGlobalContext } from '@/app/context/store'
+import GrandChild from '@/components/GrandChild'
+
+export function Child() {
+  const user = useGlobalContext()
+
+  return (
+    <div className="flex flex-col items-center border border-solid border-slate-800 m-5 p-10 rounded-md bg-yellow-200">
+      <div className="border-b-orange-600 border-b-4">Child Component</div>
+      <div className="text-3xl font-bold mb-4"> Context Value: {user.rock}</div>
+      <div>
+        <GrandChild />
+      </div>
+    </div>
+  )
+}

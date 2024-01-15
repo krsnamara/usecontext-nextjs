@@ -9,7 +9,7 @@ import {
 } from 'react'
 
 type DataType = {
-  firstName: string
+  rock: string
 }
 
 interface ContextProps {
