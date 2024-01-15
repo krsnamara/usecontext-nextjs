@@ -13,25 +13,25 @@ type DataType = {
 }
 
 interface ContextProps {
-  userId: string
-  setUserId: Dispatch<SetStateAction<string>>
+  rock: string
+  setRock: Dispatch<SetStateAction<string>>
   data: DataType[]
   setData: Dispatch<SetStateAction<DataType[]>>
 }
 
 const GlobalContext = createContext<ContextProps>({
-  userId: '',
-  setUserId: () => {},
+  rock: '',
+  setRock: () => {},
   data: [],
   setData: () => {},
 })
 
 export const GlobalContextProvider = ({ children }) => {
-  const [userId, setUserId] = useState('')
+  const [rock, setRock] = useState('')
   const [data, setData] = useState<DataType[]>([])
 
   return (
-    <GlobalContext.Provider value={{ userId, setUserId, data, setData }}>
+    <GlobalContext.Provider value={{ rock, setRock, data, setData }}>
       {children}
     </GlobalContext.Provider>
   )

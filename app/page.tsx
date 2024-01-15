@@ -2,27 +2,33 @@
 
 import { useEffect } from 'react'
 import { useGlobalContext } from '@/app/context/store'
-import { NavBar } from '@/components/NavBar'
 export default function Home() {
-  const { userId, setUserId, data, setData } = useGlobalContext()
+  const { rock, setRock, data, setData } = useGlobalContext()
 
   useEffect(() => {
-    setUserId('123')
+    setRock('123')
     setData([
-      { firstName: 'John' },
-      { firstName: 'Jane' },
-      { firstName: 'Joe' },
+      { firstName: 'Quartz' },
+      { firstName: 'Marble' },
+      { firstName: 'Granite' },
     ])
-  }, [])
+  }, [setData, setRock])
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setData([...data, { firstName: e.target.value }])
+  }
 
   return (
     <div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <p>User ID: {userId}</p>
-        <p>First Name:</p>
+      <main className="">
+        <p>Type of rock: {rock}</p>
+        <ul>List of rocks</ul>
         {data.map((e, i) => (
-          <p key={i}>{e.firstName}</p>
+          <li key={i}>{e.firstName}</li>
         ))}
+        <input type="text" />
+        <button onSubmit={handleSubmit}></button>
       </main>
     </div>
   )

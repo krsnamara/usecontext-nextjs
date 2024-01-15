@@ -39,7 +39,7 @@ export function NavBar() {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <h1 className=" text-xl">useContext</h1>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
