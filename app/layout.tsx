@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { NavBar } from '@/components/NavBar'
+import RockContextProvider from './context/RockContextProvider'
 
 export const metadata: Metadata = {
   title: 'useContext with TypeScript',
@@ -17,7 +18,7 @@ export default function RootLayout({
       <head />
       <body>
         <NavBar />
-        {children}
+        <RockContextProvider>{children}</RockContextProvider>
       </body>
     </html>
   )

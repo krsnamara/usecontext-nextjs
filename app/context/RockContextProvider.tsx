@@ -1,3 +1,4 @@
+'use client'
 import { Rock } from '@/interfaces'
 import { RockContext } from './RockContext'
 import React, { ReactNode, useState } from 'react'

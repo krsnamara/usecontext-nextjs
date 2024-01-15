@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",
+    "client": "^0.0.1",
     "next": "14.0.4",
+    "prisma": "^5.8.1",
     "react": "^18",
     "react-dom": "^18"
   },
