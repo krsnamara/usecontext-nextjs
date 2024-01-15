@@ -1,4 +1,5 @@
 import { Rock } from '@/interfaces'
+import Link from 'next/link'
 import React from 'react'
 
 interface IProps {
@@ -7,9 +8,11 @@ interface IProps {
 
 export default function RockCard({ rock }: IProps) {
   return (
-    <div className="flex flex-col items-center border border-solid border-slate-800 m-5 p-10 rounded-md bg-teal-200">
-      <p className="text-slate-600 text-center text-lg">{rock.name}</p>
-      <p className="text-purple-800 text-center">{rock.lastSeen}</p>
-    </div>
+    <Link href={`/rocks/${rock.id}`}>
+      <div className="border shadow hover:shadow-md cursor-pointer transition flex flex-col items-center m-5 p-10 rounded-md bg-yellow-200">
+        <p className="text-slate-600 text-center text-lg">{rock.name}</p>
+        <p className="text-purple-800 text-center">{rock.lastSeen}</p>
+      </div>
+    </Link>
   )
 }
