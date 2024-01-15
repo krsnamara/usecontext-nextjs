@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { GlobalContextProvider } from './context/store'
 import { NavBar } from '@/components/NavBar'
 
 export const metadata: Metadata = {
@@ -15,11 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head />
       <body>
-        <GlobalContextProvider>
-          <NavBar />
-          {children}
-        </GlobalContextProvider>
+        <NavBar />
+        {children}
       </body>
     </html>
   )

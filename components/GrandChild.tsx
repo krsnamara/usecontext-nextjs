@@ -11,13 +11,6 @@ export default function GrandChild() {
     setData([{ rock: 'Quartz' }, { rock: 'Marble' }, { rock: 'Granite' }])
   }, [setData, setRock])
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const newRock = e.target.rock.value
-    setData([...data, { rock: newRock }])
-    e.target.rock.value = ''
-  }
-
   return (
     <div className="flex flex-col justify-center items-center gap-4 p-8 border border-slate-600 rounded-md bg-purple-200">
       <div className="border-b-orange-600 border-b-4">GrandChild Component</div>
@@ -31,7 +24,7 @@ export default function GrandChild() {
             ))}
           </ul>
         </div>
-        <form className="flex items-center gap-3" onSubmit={handleSubmit}>
+        <form className="flex items-center gap-3">
           <label htmlFor="#rock"></label>
           <input
             className="border border-slate-400 rounded-md p-2 outline-none focus:border-slate-700"

@@ -29,14 +29,16 @@ export function NavBar() {
             <Link href="/">
               <p>Homepage</p>
             </Link>
-            <Link href="/blog">
-              <p>Blog</p>
+            <Link href="/addRock">
+              <p>Add Rock</p>
             </Link>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <h1 className=" text-xl">useContext</h1>
+        <Link href="/">
+          <p className=" text-xl">useContext</p>
+        </Link>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
