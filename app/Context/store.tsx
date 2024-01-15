@@ -8,6 +8,10 @@ import {
   useState,
 } from 'react'
 
+type Stone = {
+  rock: string
+}
+
 type DataType = {
   rock: string
 }

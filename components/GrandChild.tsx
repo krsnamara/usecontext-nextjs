@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react'
 import { useGlobalContext } from '@/app/context/store'
-import Form from './Form'
 
 export default function GrandChild() {
   const { rock, setRock, data, setData } = useGlobalContext()
@@ -12,12 +11,11 @@ export default function GrandChild() {
     setData([{ rock: 'Quartz' }, { rock: 'Marble' }, { rock: 'Granite' }])
   }, [setData, setRock])
 
-  const handleSubmit = (e: {
-    preventDefault: () => void
-    target: { value: any }
-  }) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    setData([...data, { rock: e.target.value }])
+    const newRock = e.target.rock.value
+    setData([...data, { rock: newRock }])
+    e.target.rock.value = ''
   }
 
   return (
@@ -33,7 +31,22 @@ export default function GrandChild() {
             ))}
           </ul>
         </div>
-        <Form />
+        <form className="flex items-center gap-3" onSubmit={handleSubmit}>
+          <label htmlFor="#rock"></label>
+          <input
+            className="border border-slate-400 rounded-md p-2 outline-none focus:border-slate-700"
+            placeholder="Add new rock"
+            type={'text'}
+            id="rock"
+            name="rock"
+          />
+          <button
+            className="border border-slate-700 w-auto h-auto rounded-md hover:bg-yellow-200 hover:text-slate-700 p-2"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
       </main>
     </div>
   )
