@@ -11,7 +11,10 @@ export default function Home() {
         Home Tree
       </div>
       <div className="border-b-orange-600 border-b-4">Parent Component</div>
-      <div className="text-3xl font-bold mb-4"> Context Value:{rocks.rock}</div>
+      <div className="text-3xl font-bold mb-4">
+        {' '}
+        Favorite Rock: {rocks.rock}
+      </div>
       <div>
         <Child />
       </div>

@@ -7,7 +7,7 @@ export default function GrandChild() {
   const { rock, setRock, data, setData } = useGlobalContext()
 
   useEffect(() => {
-    setRock('Shale')
+    setRock('Limestone')
     setData([{ rock: 'Quartz' }, { rock: 'Marble' }, { rock: 'Granite' }])
   }, [setData, setRock])
 
