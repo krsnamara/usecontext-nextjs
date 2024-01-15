@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { GlobalContextProvider } from './Context/store'
+import { GlobalContextProvider } from './context/store'
+import { NavBar } from '@/components/NavBar'
 
 export const metadata: Metadata = {
   title: 'useContext with TypeScript',
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GlobalContextProvider>{children}</GlobalContextProvider>
+        <GlobalContextProvider>
+          <NavBar />
+          {children}
+        </GlobalContextProvider>
       </body>
     </html>
   )
