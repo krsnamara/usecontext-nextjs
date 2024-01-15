@@ -22,11 +22,23 @@ function Details({ params }: { params: { rockId: number } }) {
 
   return (
     <>
-      <div>{/* <h1>Rock details about {params.rockId}</h1> */}</div>
       <div>
         {selectedRock ? (
-          <div>
-            <h1>Rock details about {selectedRock.name}</h1>
+          <div className="flex flex-col items-center p-10 rounded-md bg-yellow-200">
+            <div className="flex flex-col justify-start mb-5 gap-3">
+              <div className="flex items-center gap-4">
+                <h1>Rock details about:</h1>
+                <p className="text-slate-600 text-center text-2xl">
+                  {selectedRock.name}
+                </p>
+              </div>
+              <p className="text-purple-800">
+                Last seen: {selectedRock.lastSeen}
+              </p>
+              <p className="text-purple-800">
+                Description: {selectedRock.description}
+              </p>
+            </div>
             <Button
               className="col-span-2 w-52 place-self-center"
               onClick={goBack}

@@ -38,4 +38,6 @@ To get started with this project, follow these steps:
 
 - [Next.js 14 Dynamic Routes from Codevolution](https://www.youtube.com/watch?v=N4-EkNJ6RFM)
 
+- [14 Context API with local Storage with Hitesh Choudhary ](https://www.youtube.com/watch?v=EeOPyXwJiXk)
+
 - [Prisma - The Easiest Way to Work with DB in Next.js](https://www.youtube.com/watch?v=FMnlyi60avU)

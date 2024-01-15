@@ -8,6 +8,7 @@ import { redirect } from 'next/navigation'
 function Add() {
   const [name, setName] = useState('')
   const [lastSeen, setlastSeen] = useState('')
+  const [description, setDescription] = useState('')
 
   // pull in addRock function from the context
   const { addRock } = useRockContext()
@@ -16,9 +17,10 @@ function Add() {
   // For this project I am focusing on useContext functionality
 
   const add = () => {
-    addRock({ name, lastSeen })
+    addRock({ name, lastSeen, description })
     setName('')
     setlastSeen('')
+    setDescription('')
     // TODO redirect to home page
   }
 
@@ -34,6 +36,11 @@ function Add() {
           labelText="Last Seen"
           value={lastSeen}
           onChange={(e) => setlastSeen(e.target.value)}
+        />
+        <TextBox
+          labelText="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         />
         <Button className="col-span-2 w-52 place-self-center" onClick={add}>
           Add
