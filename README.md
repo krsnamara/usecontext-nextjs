@@ -31,3 +31,4 @@ To get started with this project, follow these steps:
 - [Next.js 13 Context API Tutorial](https://www.youtube.com/watch?v=woaUOS8fqBw)
 - [Learn React Hooks Series with Cosden Solutions](https://www.youtube.com/watch?v=HYKDUF8X3qI)
 - [How to use Context API in React/NextJS from Digital CEO](https://www.youtube.com/watch?v=YLI6VGV6QDE)
+- [Prisma - The Easiest Way to Work with DB in Next.js](https://www.youtube.com/watch?v=FMnlyi60avU)
